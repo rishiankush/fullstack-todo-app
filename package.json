@@ -1,0 +1,18 @@
+{
+  "name": "go-game-monorepo",
+  "private": true,
+  "workspaces": [
+    "apps/backend",
+    "apps/mobile",
+    "apps/web"
+  ],
+  "scripts": {
+    "start:backend": "pnpm --filter backend dev",
+    "start:mobile": "pnpm --filter mobile start",
+    "start:web": "pnpm --filter web dev",
+    "start:all": "concurrently \"pnpm start:backend\" \"pnpm start:mobile\" \"pnpm start:web\""
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
